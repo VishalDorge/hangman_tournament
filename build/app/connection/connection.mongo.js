@@ -13,8 +13,8 @@ exports.connectToMongo = void 0;
 const mongoose_1 = require("mongoose");
 const connectToMongo = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { mongo_connection_url } = process.env;
-        yield (0, mongoose_1.connect)(mongo_connection_url || "");
+        // const { mongo_connection_url } = process.env;
+        yield (0, mongoose_1.connect)("mongodb+srv://vishaldorge:Vishal123@hangmantournament.f4mtlbj.mongodb.net/" || "");
         console.log("connected to mongoDB");
         return true;
     }
