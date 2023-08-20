@@ -46,7 +46,7 @@ const login = async (credentials: ICredentials) => {
     return { role: user.role, accessToken, refreshToken };
 }
 
-const generateAccessToken = (refreshToken: string) => {
+const generateAccessToken = (refreshToken: string): any => {
     const publicKey = getPublicKey();
     const payload = verify(refreshToken, publicKey || "") as JwtPayload;
     const {type, ...userData} = payload;
